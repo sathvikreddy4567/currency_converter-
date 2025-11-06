@@ -12,7 +12,7 @@ def currency_converter(amount, from_currency, to_currency):
     if from_currency not in rates or  to_currency not in rates :
       print('PLEASE ENTER THE VALID CURRENCY ! [EG:USD,EUR,INR..]')
       return None
-  #converting the user amount into indain currency 
+  #converting the user amount into indian currency 
     IND_amount= amount / rates[from_currency]
     converted_amount = IND_amount * rates[to_currency]
     return converted_amount
@@ -28,4 +28,5 @@ try:
         print(f"\n {amount:.2f} {from_currency.upper()} = {result:.2f} {to_currency.upper()}")
         #showing the error if user is enter any wrong information 
 except ValueError:
+
     print("please enter a valid number of amount ")
